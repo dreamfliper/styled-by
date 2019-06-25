@@ -1,9 +1,9 @@
 {
-  "name": "styled-by",
-  "version": "0.3.0",
+  "name": "@dreamfliper/styled-by",
+  "version": "0.4.0",
   "description": "Simple and powerful lib to handle styled props in your components",
   "license": "MIT",
-  "repository": "brunobertolini/styled-by",
+  "repository": "dreamfliper/styled-by",
   "author": {
     "name": "Bruno Bertolini",
     "email": "dev@brunobertolini.com",

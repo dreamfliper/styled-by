@@ -1,9 +1,12 @@
+const path = (obj, address) =>
+	address.reduce((result, key) => result && result[key], obj);
+
 const mapOpt = {
 	function: ({ options, props, prop }) => options[props[prop]](props),
 	string: ({ options, props, prop }) => options[props[prop]],
 	undefined: ({ options, props }) =>
-		typeof options._ === 'function' ? options._(props) : null
-}
+		typeof options._ === "function" ? options._(props) : null
+};
 
 const mapOptions = {
 	string: ({ options }) => options,
@@ -11,14 +14,14 @@ const mapOptions = {
 	object: ({ options, props, prop }) =>
 		mapOpt[typeof options[props[prop]]]({ options, props, prop }),
 	undefined: () => {}
-}
+};
 
 const styledProp = (prop, options) => props =>
-	props[prop]
+	path(props, prop.split("."))
 		? options
 			? mapOptions[typeof options]({ prop, options, props })
 			: props[prop]
-		: ''
+		: "";
 
 const styledOptions = (options, defaultProps = {}) => props =>
 	Object.keys(options).reduce(
@@ -27,12 +30,12 @@ const styledOptions = (options, defaultProps = {}) => props =>
 				...defaultProps,
 				...props
 			})}`,
-		''
-	)
+		""
+	);
 
 const styledBy = (prop, options) =>
-	typeof prop === 'string'
+	typeof prop === "string"
 		? styledProp(prop, options)
-		: styledOptions(prop, options)
+		: styledOptions(prop, options);
 
-module.exports = styledBy
+module.exports = styledBy;
