@@ -20,7 +20,7 @@ const styledProp = (prop, options) => props =>
 	path(props, prop.split("."))
 		? options
 			? mapOptions[typeof options]({ prop, options, props })
-			: props[prop]
+			: path(props, prop.split("."))
 		: "";
 
 const styledOptions = (options, defaultProps = {}) => props =>
