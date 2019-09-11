@@ -2,7 +2,7 @@ import babel from "rollup-plugin-babel";
 import uglify from "rollup-plugin-uglify";
 
 export default {
-	entry: "src/index.js",
+	entry: "src/refactor.js",
 	moduleName: "styledBy",
 	exports: "named",
 	targets: [
