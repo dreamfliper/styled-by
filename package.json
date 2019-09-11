@@ -71,5 +71,8 @@
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-uglify": "^2.0.1",
     "standard-version": "^4.2.0"
+  },
+  "dependencies": {
+    "ramda": "^0.26.1"
   }
 }
