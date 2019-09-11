@@ -5,6 +5,7 @@ const mapOpt = {
 	function: ({ options, props, prop }) =>
 		options[path(props, prop.split("."))](props),
 	string: ({ options, props, prop }) => options[path(props, prop.split("."))],
+	object: ({ options, props, prop }) => options[path(props, prop.split("."))],
 	undefined: ({ options, props }) =>
 		typeof options._ === "function" ? options._(props) : null
 };
