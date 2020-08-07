@@ -1,6 +1,6 @@
 {
   "name": "@dreamfliper/styled-by",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Simple and powerful lib to handle styled props in your components",
   "license": "MIT",
   "repository": "dreamfliper/styled-by",

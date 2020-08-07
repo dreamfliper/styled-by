@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.2"></a>
+## [0.5.2](https://github.com/dreamfliper/styled-by/compare/v0.5.1...v0.5.2) (2020-08-07)
+
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/brunobertolini/styled-by/compare/v0.2.5...v0.3.0) (2017-09-28)
 
